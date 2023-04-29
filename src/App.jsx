@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 const App = () => {
     const [notes, setNotes] = useState(
-        JSON.parse(localStorage.getItem("notes") || [])
+        JSON.parse(localStorage.getItem("notes")) || []
     );
     const [search, setSearch] = useState("");
 
