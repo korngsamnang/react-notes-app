@@ -1,7 +1,9 @@
 import { CiSearch } from "react-icons/ci";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { DataContext } from "../context/AppContext.jsx";
 
-const Header = ({ setSearch }) => {
+const Header = () => {
+    const { setSearch } = useContext(DataContext);
     const [showSearch, setShowSearch] = useState(true);
     return (
         <header className="notes__header">

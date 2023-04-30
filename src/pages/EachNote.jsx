@@ -1,10 +1,13 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import PageNotFound from "./PageNotFound.jsx";
+import { DataContext } from "../context/AppContext.jsx";
 
-const EachNote = ({ notes, setNotes }) => {
+const EachNote = () => {
+    const { notes, setNotes } = useContext(DataContext);
+
     const { id } = useParams();
     const note = notes.find(noteItem => noteItem.id.toString() === id);
     const [editTitle, setEditTitle] = useState("");

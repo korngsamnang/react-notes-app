@@ -1,12 +1,15 @@
 import { Link, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { format } from "date-fns";
 import { v4 as uuid } from "uuid";
+import { DataContext } from "../context/AppContext.jsx";
 
-const CreateNote = ({ notes, setNotes }) => {
+const CreateNote = () => {
     const [title, setTitle] = useState("");
     const [details, setDetails] = useState("");
+
+    const { notes, setNotes } = useContext(DataContext);
 
     const navigate = useNavigate();
 

@@ -2,11 +2,14 @@ import NoteItem from "../components/NoteItem";
 import Header from "../components/Header.jsx";
 import { BsPlusLg } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DataContext } from "../context/AppContext.jsx";
 
-const Notes = ({ notes, setSearch }) => {
+const Notes = () => {
+    const { notes } = useContext(DataContext);
     return (
         <div>
-            <Header setSearch={setSearch} />
+            <Header />
             {notes.length ? (
                 <div className="notes__container">
                     {notes.map(note => (
