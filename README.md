@@ -6,6 +6,9 @@ This is a note-taking app built using React. The app allows users to add, edit,
 delete, and search notes. The notes are stored locally using the browser's local
 storage, ensuring persistence across sessions.
 
+> React note-taking app.
+> ![](https://github.com/korngsamnang/react-notes-app/assets/99709883/6f8af450-4f74-4d94-8057-639978520778)
+
 ## Features
 
 -   **Add:** Easily add new notes to your collection.
